@@ -18,11 +18,11 @@ async function main(){
 
 
  
-    let txn2 = await counter.connect(otherAccount).count();
-    console.log("other ");
+    // let txn2 = await counter.connect(otherAccount).count();
+    // console.log("other ");
 
-    await txn2.wait(); //等待mint结束
-    console.log(txn2);
+    // await txn2.wait(); //等待mint结束
+    // console.log(txn2);
 }
 main()
   .then(() => process.exit(0))
