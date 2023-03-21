@@ -10,9 +10,15 @@ const scankey = process.env.ETHERSCAN_API_KEY
 module.exports = {
   solidity: "0.8.18",
   networks: {
-    dev: {
+      dev: {
       url: "http://127.0.0.1:8545",
+      accounts: [process.env.KEYOWNER,process.env.KEYOTHERACCOUNT],
       chainId: 31337
+      },
+      ganache:{
+        url: "http://127.0.0.1:7545",
+        accounts: [process.env.KEYOWNER,process.env.KEYOTHERACCOUNT],
+        chainId: 1337
       },
       sepolia: {
       url: "https://sepolia.infura.io/v3/6a838a8ad80a4fd0b3c348bc3dd38cee",
@@ -30,15 +36,4 @@ module.exports = {
     // }
   },
 
-  abiExporter: {
-    path: './deployments/abi',
-    clear: true,
-    flat: true,
-    only: [],
-    spacing: 2,
-    pretty: true,
-  },
-  etherscan: {
-      apiKey: scankey
-  },
 };

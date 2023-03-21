@@ -1,0 +1,23 @@
+{
+  "name": "w3-1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "hardhat": "^2.14.0",
+    "undici": "^5.22.1"
+  },
+  "dependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@openzeppelin/contracts": "^4.9.0",
+    "dotenv": "^16.0.3",
+    "hardhat-abi-exporter": "^2.10.1",
+    "save-dev": "^0.0.1-security"
+  }
+}
