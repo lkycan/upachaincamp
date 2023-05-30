@@ -87,6 +87,8 @@ setGlobalDispatcher(proxyAgent);
 以上代码用来告诉程序按照本地代理链接网络。
 
 记得安装 undici 依赖包：
+```
 
 npm install --save-dev undici
+```
 按照以上方法，可以顺利部署并测试合约。
