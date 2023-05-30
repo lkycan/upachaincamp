@@ -74,10 +74,11 @@ sepolia
 
 
 验证
+```
 npx hardhat verify 0x7a78c1744A6D0A8B75F5862B252CE4A51563470C  --contract  contracts/MyToken.sol:MyToken --network goerli 
 
 npx hardhat verify 0x3D6676Cc932155eEf0E7773E68F9CBf574c186B5 --contract  contracts/Vault.sol:Vault 0x7a78c1744A6D0A8B75F5862B252CE4A51563470C --network goerli 
-
+```
 
 在 hardhat.config.js 中添加以下代码：
 ```
