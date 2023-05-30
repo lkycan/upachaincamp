@@ -80,10 +80,12 @@ npx hardhat verify 0x3D6676Cc932155eEf0E7773E68F9CBf574c186B5 --contract  contra
 
 
 在 hardhat.config.js 中添加以下代码：
+```
 
 const { ProxyAgent, setGlobalDispatcher } = require("undici");
 const proxyAgent = new ProxyAgent("http://127.0.0.1:7890");
 setGlobalDispatcher(proxyAgent);
+```
 以上代码用来告诉程序按照本地代理链接网络。
 
 记得安装 undici 依赖包：
