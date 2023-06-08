@@ -1,8 +1,8 @@
 发一个erc20 token，数量10000
 
 写一个金库合约，可以存，取 发行的erc20 token
-
-
+映射浏览器调试
+remixd -s .\w3-1\contracts\ -u https://remix.ethereum.org
 实现
 MyToken.sol   // 部署后获得   0x5FbDB2315678afecb367f032d93F642f64180aa3
 ```
@@ -95,3 +95,22 @@ setGlobalDispatcher(proxyAgent);
 npm install --save-dev undici
 ```
 按照以上方法，可以顺利部署并测试合约。
+
+部署 nft721
+```
+npx hardhat run .\scripts\deploy_NFT271.js --network goerli 
+myERC721 deployed to 0xC399d3974d5E401c85dAE02609573cb2B19Cf817
+
+npx hardhat verify 0xC399d3974d5E401c85dAE02609573cb2B19Cf817 --contract  contracts/MyERC721.sol:MyERC721 --network goerli 
+```
+
+部署 nft 交易
+```
+npx hardhat run .\scripts\deploy_NFTMarket.js --network goerli 
+nFTMarket deployed to 0x5655a44606bA46634eBE2466019d8069748FAdAD
+npx hardhat verify 0x5655a44606bA46634eBE2466019d8069748FAdAD --contract  contracts/NFTMarket.sol:NFTMarket 0x7a78c1744A6D0A8B75F5862B252CE4A51563470C 0xC399d3974d5E401c85dAE02609573cb2B19Cf817 --network goerli 
+
+https://goerli.etherscan.io/address/0x5655a44606bA46634eBE2466019d8069748FAdAD#code
+```
+
+https://app.pinata.cloud/   上传图片
